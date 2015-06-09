@@ -1,8 +1,8 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+.tab-button {
+	border: none; 
+	border-radius: 0px; 
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: block;
 }

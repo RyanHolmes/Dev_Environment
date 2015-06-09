@@ -1,9 +1,13 @@
 doctype html
-html.
+html
 extends layout
 
 block content
-  <h1>  #{title} </h1>
-  <p> Welcome to #{title} </p>
-  <a href="http://localhost:3000/about"><button id="aboutButton" onclick="aboutButton()" type="button" class="btn btn-default">About</button></a>
+    h1  #{title}
+    p Welcome to #{title} 
+    a(href='http://localhost:3000/about')
+        button#aboutButton.btn.btn-default About
+    .p#test(onclick="test()") Hey
+    
+            
 

@@ -4,9 +4,9 @@ $(document).ready(function(){
 
 function test(){
 	var p = Ext.create('Ext.panel.Panel', {
-	    title: 'Hello',
+	    title: 'It works',
 	    width: 200,
-	    html: '<p>World!</p>',
+	    html: '<p>You win!</p>',
 	    renderTo: Ext.getBody()
 	});
 }

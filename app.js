@@ -5,6 +5,21 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// New Code for mongo
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/db');
+
+//var MongoClient = require('mongodb').MongoClient;
+
+// // DATBASE CRUMS ======================================
+
+// MongoClient.connect('mongodb://ryan:ryan@ds031701.mongolab.com:31701/testing', function(err, db) {
+//     if (err) throw err;
+//     console.log("Connected to Database");
+//     _db = db //this is our global database object
+// })
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -23,6 +38,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Make our db accessible to our router
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

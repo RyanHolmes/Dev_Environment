@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 // New Code for mongo
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('mongodb://ryan:ryan@ds029630.mongolab.com:29630/testing');
+var db = monk('mongodb://Admin:Admin@ds029630.mongolab.com:29630/mango');
 
 //var MongoClient = require('mongodb').MongoClient;
 

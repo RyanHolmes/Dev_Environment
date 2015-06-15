@@ -1,4 +1,5 @@
 var express = require('express');
+var bcrypt = require('bcrypt-nodejs');
 var router = express.Router();
 
 /* GET home page. */
@@ -35,12 +36,22 @@ router.get('/userlist', function(req, res) {
 router.get('/login', function(req, res) {
 	var db = req.db;
 	var collection = db.get('bcrypt');
-	console.log(collection);
 	collection.find({},{},function(e, results){
 		res.render('login', {
 			"userlist" : results
 		});
 	});
+});
+
+router.post('/login', function(req, res) {
+  console.log(req.body.entry);
+  var collection = db.get('bcrypt');
+
+  // collection.insert({pw: req.body.entry}, {}, function(err, results) {
+  //   if(err) console.log(err);
+  // });
+
+  res.send(req.body.entry);
 });
 
 module.exports = router;

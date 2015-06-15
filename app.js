@@ -10,16 +10,6 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('mongodb://Admin:Admin@ds029630.mongolab.com:29630/mango');
 
-//var MongoClient = require('mongodb').MongoClient;
-
-// // DATBASE CRUMS ======================================
-
-// MongoClient.connect('mongodb://ryan:ryan@ds031701.mongolab.com:31701/testing', function(err, db) {
-//     if (err) throw err;
-//     console.log("Connected to Database");
-//     _db = db //this is our global database object
-// })
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 

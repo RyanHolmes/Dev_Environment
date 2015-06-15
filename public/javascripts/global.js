@@ -1,6 +1,7 @@
-
+var bcrypt = new bCrypt();
 
 $(document).ready(function(){
+	$('#loginButton').on('click', loginTest);
 
 });
 
@@ -74,4 +75,30 @@ $('#button1').on('click', function () {
 
 function calendarHandler() {
 	alert("bols");
+}
+
+
+
+function loginTest(){
+	var entry = $("#loginText").val();
+	console.log(entry);
+
+	bcrypt.hashpw(entry, bcrypt.gensalt(10), function(result) {
+		console.log(typeof(result));
+
+		var data = {"entry": result};
+
+		$.ajax({
+			type: 'POST',
+			data: JSON.stringify(data),
+	        contentType: 'application/json',
+	        url: 'http://localhost:3000/login',						
+	        success: function(data) {
+	            console.log('success');
+	            console.log(JSON.stringify(data));
+	        }
+	    });
+	});
+
+
 }

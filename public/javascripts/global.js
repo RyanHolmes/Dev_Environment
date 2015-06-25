@@ -143,13 +143,6 @@ function calendarHandler() {
 		    				}
 		    				Ext.getCmp("calendarDate").setText(formattedDate);
 		    			}
-	    			},{
-	    				xtype: "button",
-	    				text: "Create Event",
-	    				margin: "25 0 0 0",
-	    				handler: function (){
-	    					console.log("Add Event");
-	    				}
 	    			}]	
 	    		},{
 	    			xtype: "grid",
@@ -229,11 +222,12 @@ function calendarHandler() {
 										    			console.log("START TIME");
 										    		}
 										    	},{
+										    		//RYANTODO: chang to numberfields and am/pm dropdown
 										    		xtype: 'button',
 										    		text: "End Time",
 										    		handler: function (){
 										    			//THIS IS FUCKY RYANTODO:
-										    // 			var e = Ext.create('Ext.picker.Time', {
+										    			//var e = Ext.create('Ext.picker.Time', {
 														//    width: 100,
 														//    height: 200,
 														//    increment: 30,

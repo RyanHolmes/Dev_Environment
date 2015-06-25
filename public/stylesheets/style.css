@@ -6,3 +6,93 @@
 	margin-right: 0px;
 	display: block;
 }
+
+.loginBar {
+	background: #33CCCC;
+	color: blue;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.signupButton {
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 50px;
+	background:  #33CCCC;
+	color: blue;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+	padding-top: 13px;
+	font-style: trebuchet;
+	font-size: 1.2em;
+}
+
+.signupButton:hover{
+	background: #248F8F;
+}
+
+.loginButton {
+	position: absolute;
+	right: 100px;
+	width: 100px;
+	height: 50px;
+	background:  #33CCCC;
+	color: blue;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+	padding-top: 13px;
+	font-style: trebuchet;
+	font-size: 1.2em;
+}
+
+.loginButton:hover{
+	background: #248F8F;
+}
+
+.loginBarImg {
+	height: 50px;
+	width: auto;
+}
+
+.landingImg {
+	max-height: 100%;
+	max-width: 100%;
+	z-index: 0;
+	/*margin-top: -300px;*/
+}
+
+.titleOverlay {
+	position: absolute;
+	text-align: center;
+	color: white;
+	z-index: 2;
+}
+
+.titleOverlay  h1{
+	font-size: 7em;
+}
+
+.sloganOverlay{
+	position: absolute;
+	text-align: center;
+	color: white;
+	z-index: 2;
+}
+
+.sloganOverlay h1 {
+	font-size: 3.8em;
+}
+
+.searchLanding {
+	position: absolute;
+	z-index: 2;
+}
+
+

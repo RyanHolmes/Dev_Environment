@@ -3,11 +3,46 @@
   <head>
     <meta charset="UTF-8">
     <title>Ryan</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="javascripts/global.js"></script>
+    <script src="javascripts/landing.js"></script>
   </head>
    
-  <body>
-  <button id="yo"> Hey WHATS UP</button>
-  <div class="jumbotron" id="hey">woot</div>
+  <body onload="loadLanding()">
+  	<div id="main">
+  		<!-- NAV BAR -->
+  		<div id="loginBar" class="loginBar">
+  			<span id="loginButton" class="loginButton"> Log-In </span>
+  			<span id="signupButton" class="signupButton"> Sign-Up </span>
+  			<span><img src="images/logo.png" class="loginBarImg" id="loginBarImg"></span>
+  		</div>
+
+  		<!-- IMAGE -->
+  		<div id="landingImage">
+  			<img src="images/Mango-Soup.jpg" class="landingImg" id="landingImg">
+  		</div>
+
+  		<!-- TITLE AND SLOGAN -->
+		<div id="titleOverlay" class="titleOverlay"> <h1> Find Your Home </h1></div>
+		<div id="sloganOverlay" class="sloganOverlay"><h1>See what all the buzz is about</h1></div>
+
+		<!-- SEARCH BAR -->
+		<div class="input-group input-group-lg col-md-6 col-md-offset-3" id="searchLanding">
+	        <input type="text" class="form-control" placeholder="Search for...">
+	        <span class="input-group-btn">
+	        	<button class="btn btn-default" type="button">Search</button>
+	        </span>
+	    </div>
+
+  		<!-- STUFF UNDER THE LANDING -->
+  		<div id="nextContent">
+  			<h1 style="text-align:center; font-size: 5em;"> Some Other Content</h1>
+  			<p> This is more content</p>
+  		</div>
+  	</div>
     
   </body>
 </html>

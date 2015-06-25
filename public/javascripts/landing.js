@@ -1,47 +1,28 @@
+//loads the correct size of landng page image
+function loadLanding(){
+	//adjust size of image on landing
+	var imgHeight = document.getElementById('landingImg').clientHeight;
+	var screenSize = $(window).height() - 100; //minus the height of the nav bar 
+	var difference = imgHeight - screenSize; //difference between the height of the image and the screen width
+	$('#landingImg').css("margin-top", -difference + "px"); //set margin top to the difference
 
-function load(){
-	var height = $(window).height() * 2;
-	var p = Ext.create('Ext.panel.Panel', {
-	    width: $(window).width(),
-	    height: height,
-	    layout: {
-	    	type: 'vbox',
-	    	align: 'stretch'
-	    },
-	    items: [{
-	    	xtype: 'panel',
-	    	bodyStyle:{"background-color":"orange"}, 
-	    	flex: 1,
-	    	id: 'navBar',
-	    	layout: {
-	    		type: "hbox",
-	    		align: "stretch"
-	    	},
-	    	items: [{
-	    		xtype: "label",
-	    		text: "",
-	    		flex: 1
-	    	},{
-	    		xtype: "button",
-	    		text: "Home",
-	    		flex: 1
-	    	},{
-	    		xtype: "button",
-	    		text: "Home",
-	    		flex: 1
-	    	}]
-	    },{
-	    	xtype: 'panel',
-	    	bodyStyle:{'backgroundImage' : 'url(images/example.jpg)'}, 
-	    	flex: 10,
-	    	id: 'landingImage'
-	    },{
-	    	xtype: 'panel',
-	    	flex: 10,
-	    	id: 'landingContent'
-	    }],
-	    renderTo: Ext.getBody()
-	});
-};
+	//adjust the title overlay based on screen size
+	var titleWidth = $('#titleOverlay').width()/2;
+	$('#titleOverlay').css("top", $(window).height()/2 - 100 + "px"); // -100 is a random number to put it higher up
+	$('#titleOverlay').css("left", $(window).width()/2 - titleWidth + "px");
+
+	//adjust slogan
+	var titleWidth = $('#sloganOverlay').width()/2;
+	$('#sloganOverlay').css("top", $(window).height()/2 + "px"); 
+	$('#sloganOverlay').css("left", $(window).width()/2 - titleWidth + "px");
+
+	//adjust search bar on load
+	var e =document.getElementById('landingImg').clientHeight/4.5;
+	$('#searchLanding').css("top", -e + "px"); 
+}
+
+$(window).resize(function (){
+	//something
+});
 
 

@@ -1,4 +1,4 @@
-var bcrypt = new bCrypt();
+//var bcrypt = new bCrypt();
 
 $(document).ready(function(){
 	$('#loginButton').on('click', loginTest);

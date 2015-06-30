@@ -1,98 +1,62 @@
-.tab-button {
-	border: none; 
-	border-radius: 0px; 
-	width: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-	display: block;
+/* Landing Page Style*/
+/*=============================================================*/
+#landingImg {
+	height: 500px;
+	background: url("../images/Mango-Soup.jpg") no-repeat;
+	overflow: hidden;
 }
 
-.loginBar {
-	background: #33CCCC;
-	color: blue;
+#landingImgOverlay{
+	color: white;
+	text-align: left;
+	background: rgba(0,0,0,0.5);
+	padding: 10px;
+}
+
+#landingImgOverlay h1{
+	font-size: 5em;
+}
+
+#landingImgOverlay h3{
+	font-size: 3em;
+}
+
+#landingNavbar{
 	height: 50px;
-	width: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 1;
+	color: white;
 }
 
-.signupButton {
-	position: absolute;
-	right: 0px;
-	width: 100px;
-	height: 50px;
-	background:  #33CCCC;
-	color: blue;
-	cursor: pointer;
-	float: left;
-	text-align: center;
-	padding-top: 13px;
-	font-style: trebuchet;
-	font-size: 1.2em;
-}
-
-.signupButton:hover{
-	background: #248F8F;
-}
-
-.loginButton {
-	position: absolute;
-	right: 100px;
-	width: 100px;
-	height: 50px;
-	background:  #33CCCC;
-	color: blue;
-	cursor: pointer;
-	float: left;
-	text-align: center;
-	padding-top: 13px;
-	font-style: trebuchet;
-	font-size: 1.2em;
-}
-
-.loginButton:hover{
-	background: #248F8F;
-}
-
-.loginBarImg {
+#landingNavbarImg {
 	height: 50px;
 	width: auto;
 }
 
-.landingImg {
-	max-height: 100%;
-	max-width: 100%;
-	z-index: 0;
-	/*margin-top: -300px;*/
+#landingLoginBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
 }
 
-.titleOverlay {
-	position: absolute;
-	text-align: center;
+#landingSignupBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#landingLoginBtn:hover {
 	color: white;
-	z-index: 2;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
 }
 
-.titleOverlay  h1{
-	font-size: 7em;
-}
-
-.sloganOverlay{
-	position: absolute;
-	text-align: center;
+#landingSignupBtn:hover {
 	color: white;
-	z-index: 2;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
 }
 
-.sloganOverlay h1 {
-	font-size: 3.8em;
+#landingSearchbar {
+	margin-top: 25px;
 }
-
-.searchLanding {
-	position: absolute;
-	z-index: 2;
-}
-
-
+/*=============================================================*/
+/*=============================================================*/

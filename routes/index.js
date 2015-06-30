@@ -12,10 +12,10 @@ router.get('/', function(req, res) {
 //   res.render('about', { title: 'About' });
 // });
 
-// //gets the about page
-// router.get('/maps', function(req, res) {
-//   res.render('maps', { title: 'Map Test' });
-// });
+//gets the about page
+router.get('/maps', function(req, res) {
+  res.render('maps', { title: 'Map Test' });
+});
 
 // //gets the about page
 // router.get('/calendar', function(req, res) {

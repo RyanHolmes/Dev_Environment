@@ -12,37 +12,36 @@
   </head>
    
   <body onload="loadLanding()">
-  	<div id="main">
-  		<!-- NAV BAR -->
-  		<div id="loginBar" class="loginBar">
-  			<span id="loginButton" class="loginButton"> Log-In </span>
-  			<span id="signupButton" class="signupButton"> Sign-Up </span>
-  			<span><img src="images/logo.png" class="loginBarImg" id="loginBarImg"></span>
-  		</div>
-
-  		<!-- IMAGE -->
-  		<div id="landingImage">
-  			<img src="images/Mango-Soup.jpg" class="landingImg" id="landingImg">
-  		</div>
-
-  		<!-- TITLE AND SLOGAN -->
-		<div id="titleOverlay" class="titleOverlay"> <h1> Find Your Home </h1></div>
-		<div id="sloganOverlay" class="sloganOverlay"><h1>See what all the buzz is about</h1></div>
-
-		<!-- SEARCH BAR -->
-		<div class="input-group input-group-lg col-md-6 col-md-offset-3" id="searchLanding">
-	        <input type="text" class="form-control" placeholder="Search for...">
-	        <span class="input-group-btn">
-	        	<button class="btn btn-default" type="button">Search</button>
-	        </span>
-	    </div>
-
-  		<!-- STUFF UNDER THE LANDING -->
-  		<div id="nextContent">
-  			<h1 style="text-align:center; font-size: 5em;"> Some Other Content</h1>
-  			<p> This is more content</p>
-  		</div>
-  	</div>
-    
+  	<div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12" id="landingImg">
+        <!-- Nav Bar -->
+          <div class="row">
+            <div class="col-lg-12" id="landingNavbar">
+              <img src="images/logo.png" alt="" id="landingNavbarImg">
+              <span id="landingLoginBtn">Log-In</span>
+              <span id="landingSignupBtn">Sign-Up</span>
+            </div>
+          </div>
+          <!-- Overlay title and caption -->
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3" id="landingImgOverlay">
+              <h1 id="landingTitle"> Project Mango</h1>
+              <h3 id="landingCaption">See What All The Buzz Is About!</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+              <div class="input-group input-group-lg" id="landingSearchbar">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
   </body>
 </html>

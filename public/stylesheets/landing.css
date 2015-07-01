@@ -63,5 +63,17 @@
 #landingSearchbar {
 	margin-top: 25px;
 }
+
+#landingHint {
+	color: white;
+}
+
+#landingHint a {
+	color: #00BFFF;
+}
+
+#landingHint a:hover {
+	color: black;
+}
 /*=============================================================*/
 /*=============================================================*/

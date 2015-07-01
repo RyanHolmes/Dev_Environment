@@ -9,6 +9,17 @@ body {
 /* 6 forms stacked, only one visible. As the user progresses make more visible*/
 
 /*FORM 1*/
+/* dots*/
+.dot{
+	border-radius: 25px;
+	height: 25px;
+	width: 25px;
+	background: red;
+	padding: 10px;
+	margin: 10px;
+}
+
+
 #signupForm1 {
 	background: gray;
 	height: 400px;
@@ -41,6 +52,19 @@ body {
 #signupNextBtnText1 {
 	padding: 0px;
 	font-size: 1.5em;
+}
+
+/*INPUTS FOR FORM 1*/
+#signupFirstName{
+	border-radius: 10px;
+	margin-top: 25px;
+	height: 4em;
+}
+
+#signupLastName{
+	border-radius: 10px;
+	margin-top: 25px;
+	height: 4em;
 }
 
 /* FORM 2*/
@@ -98,6 +122,34 @@ body {
 	background: gray;
 	cursor: pointer;
 }
+
+/* Form 2 inputs*/
+#signupLandlordBtn{
+	background: red;
+	height: 400px;
+	border-top-right-radius: 10px;
+}
+
+#signupLandlordBtn:active{
+	box-shadow: 0 0 10px 5px green;
+}
+
+#signupLandlordBtn:hover{
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+#signupRenterBtn{
+	background: blue;
+	height: 400px;
+	border-top-left-radius: 10px;	
+}
+
+#signupRenterBtn:hover{
+	opacity: 0.75;
+	cursor: pointer;
+}
+
 
 /* FORM 3*/
 #signupForm3 {

@@ -11,8 +11,9 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('mongodb://Admin:Admin@ds029630.mongolab.com:29630/mango');
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var users = require('./routes/users');
+//var signup = require('./routes/signup-route');
 
 
 //It instantiates Express and assigns our app variable to it 
@@ -36,8 +37,9 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/', routes);
+app.use('/', index);
 app.use('/users', users);
+//app.use('/signup', signup);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

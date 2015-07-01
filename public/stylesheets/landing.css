@@ -1,0 +1,67 @@
+/* Landing Page Style*/
+/*=============================================================*/
+#landingImg {
+	height: 500px;
+	background: url("../images/Mango-Soup.jpg") no-repeat;
+	overflow: hidden;
+}
+
+#landingImgOverlay{
+	color: white;
+	text-align: left;
+	background: rgba(0,0,0,0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#landingImgOverlay h1{
+	font-size: 5em;
+}
+
+#landingImgOverlay h3{
+	font-size: 3em;
+}
+
+#landingNavbar{
+	height: 50px;
+	color: white;
+}
+
+#landingNavbarImg {
+	height: 50px;
+	width: auto;
+}
+
+#landingLoginBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#landingSignupBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#landingSignupBtn a {
+	color: white;
+}
+
+#landingLoginBtn:hover {
+	color: white;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+
+#landingSignupBtn:hover {
+	color: white;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+
+#landingSearchbar {
+	margin-top: 25px;
+}
+/*=============================================================*/
+/*=============================================================*/

@@ -17,6 +17,12 @@ router.get('/maps', function(req, res) {
   res.render('maps', { title: 'Map Test' });
 });
 
+//signup page
+router.get('/signup', function(req, res) {
+  res.render('signup', { title: 'Registration' });
+});
+
+
 // //gets the about page
 // router.get('/calendar', function(req, res) {
 //   res.render('calendar', { title: 'Calendar Test' });

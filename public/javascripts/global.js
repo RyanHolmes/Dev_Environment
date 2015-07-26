@@ -1,4 +1,4 @@
-//var bcrypt = new bCrypt();
+// var bcrypt = new bCrypt();
 
 $(document).ready(function(){
 	$('#loginButton').on('click', loginTest);
@@ -500,7 +500,26 @@ function buildGridStore(data, columns) {
 
 function loginTest(){
 
+	var username = $("#loginUsername").val();
+	var password = $("#loginPassword").val();
 
+	if (!password || !username) {
+		Ext.Msg.alert("ERROR", "Please fill in all required fields!");
+	}
+	else {
+		var data = {"username": username, "password": password};
+
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:3000/login',
+			data: JSON.stringify(data),
+			contentType: 'application/json',
+			xhrFields: { withCredentials: true },
+			success: function(results) {
+				Ext.toast(results);
+			}
+		});
+	}
 
 
 	// var entry = $("#loginText").val();
@@ -527,6 +546,32 @@ function loginTest(){
 }
 
 function signUpTest() {
+
+	// var bcrypt = bCrypt();
+
+	// console.log(bcrypt);
+
+	var chosenUsername = $("#signUpUsername").val();
+	var chosenPassword = $("#signUpPassword").val();
+
+	if (!chosenPassword || !chosenUsername) {
+		Ext.Msg.alert("ERROR", "Please fill in all required fields!");
+	}
+	else {
+		var data = {"username": chosenUsername, "password": chosenPassword};
+
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:3000/signup',
+			data: JSON.stringify(data),
+			contentType: 'application/json',
+			xhrFields: { withCredentials: true },
+			success: function(results) {
+				Ext.toast(results);
+			}
+		});
+	}
+
 	// var pw = $("#pwText").val();
 
 

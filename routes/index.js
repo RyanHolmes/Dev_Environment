@@ -44,14 +44,25 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', function(req, res) {
+  var db = req.db;
   console.log(req.body.entry);
   var collection = db.get('bcrypt');
 
-  // collection.insert({pw: req.body.entry}, {}, function(err, results) {
-  //   if(err) console.log(err);
-  // });
+  collection.insert({pw: req.body.entry, id: "testEntry"}, {}, function(err, results) {
+    if(err) console.log(err);
+    else console.log(results);
+  });
 
-  res.send(req.body.entry);
+  //res.send(req.body.entry + " " + bcrypt.hashSync(req.body.entry));
+});
+
+router.get('/checkpw', function(req, res) {
+  var db = req.db;
+  var collection = db.get('bcrypt');
+
+  collection.find({id: "testEntry"}, {}, function(e, results) {
+    res.send(results);
+  });
 });
 
 module.exports = router;

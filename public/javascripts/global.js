@@ -2,7 +2,7 @@ var bcrypt = new bCrypt();
 
 $(document).ready(function(){
 	$('#loginButton').on('click', loginTest);
-
+	$('#signUpButton').on('click', signUpTest);
 });
 
 function test(){
@@ -80,25 +80,49 @@ function calendarHandler() {
 
 
 function loginTest(){
-	var entry = $("#loginText").val();
-	console.log(entry);
-
-	bcrypt.hashpw(entry, bcrypt.gensalt(10), function(result) {
-		console.log(typeof(result));
-
-		var data = {"entry": result};
-
-		$.ajax({
-			type: 'POST',
-			data: JSON.stringify(data),
-	        contentType: 'application/json',
-	        url: 'http://localhost:3000/login',						
-	        success: function(data) {
-	            console.log('success');
-	            console.log(JSON.stringify(data));
-	        }
-	    });
-	});
 
 
+
+
+	// var entry = $("#loginText").val();
+	// console.log(entry);
+	// var data = {"entry": "testinglel"};
+
+	// bcrypt.hashpw(entry, bcrypt.gensalt(10), function(result) {
+	// 	console.log(result);
+
+	// 	data = {"entry": result};
+
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		data: JSON.stringify(data),
+	//         contentType: 'application/json',
+	//         url: 'http://localhost:3000/login',
+	//         xhrFields: { withCredentials: true },						
+	//         success: function(data) {
+	//             console.log('success');
+	//             console.log(JSON.stringify(data));
+	//         }
+	//     });
+	// });
+}
+
+function signUpTest() {
+	// var pw = $("#pwText").val();
+
+
+	// $.ajax({
+	// 	type: 'GET',
+	// 	url: 'http://localhost:3000/checkpw',
+	// 	success: function(data) {
+	// 		console.log('success');
+	// 		console.log(pw);
+	// 		console.log(data[0].pw);
+
+	// 		bcrypt.checkpw(pw, data[0].pw, function(result) {
+	// 			console.log("RESULTS OF CHECK:  " + result);
+	// 		});
+
+	// 	}
+	// });
 }

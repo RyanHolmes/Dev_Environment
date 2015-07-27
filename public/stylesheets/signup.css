@@ -130,7 +130,7 @@ body {
 	border-top-right-radius: 10px;
 }
 
-#signupLandlordBtn:active{
+#signupLandlordBtn:selection{
 	box-shadow: 0 0 10px 5px green;
 }
 

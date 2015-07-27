@@ -28,7 +28,10 @@ $(function (){
 
 	$('#signupLandlordBtn').click(function(){
 		//RYANTODO class is added and removed on click?
-		$('#merp').addClass("active");
+		$('#signupLandlordBtn').addClass("selection");
 		//css("box-shadow", "0 0 10px 5px green");
 	});
 });
+
+//1) write your own jquery "animate" function 
+//2)

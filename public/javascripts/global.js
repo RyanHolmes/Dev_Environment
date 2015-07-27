@@ -1,8 +1,8 @@
-//var bcrypt = new bCrypt();
+// var bcrypt = new bCrypt();
 
 $(document).ready(function(){
 	$('#loginButton').on('click', loginTest);
-
+	$('#signUpButton').on('click', signUpTest);
 });
 
 function test(){
@@ -499,24 +499,94 @@ function buildGridStore(data, columns) {
 
 
 function loginTest(){
-	var entry = $("#loginText").val();
-	console.log(entry);
 
-	bcrypt.hashpw(entry, bcrypt.gensalt(10), function(result) {
-		console.log(typeof(result));
+	var username = $("#loginUsername").val();
+	var password = $("#loginPassword").val();
 
-		var data = {"entry": result};
+	if (!password || !username) {
+		Ext.Msg.alert("ERROR", "Please fill in all required fields!");
+	}
+	else {
+		var data = {"username": username, "password": password};
 
 		$.ajax({
 			type: 'POST',
+			url: 'http://localhost:3000/login',
 			data: JSON.stringify(data),
-	        contentType: 'application/json',
-	        url: 'http://localhost:3000/login',						
-	        success: function(data) {
-	            console.log('success');
-	            console.log(JSON.stringify(data));
-	        }
-	    });
-	});
+			contentType: 'application/json',
+			xhrFields: { withCredentials: true },
+			success: function(results) {
+				Ext.toast(results);
+			}
+		});
+	}
+
+
+	// var entry = $("#loginText").val();
+	// console.log(entry);
+	// var data = {"entry": "testinglel"};
+
+	// bcrypt.hashpw(entry, bcrypt.gensalt(10), function(result) {
+	// 	console.log(result);
+
+	// 	data = {"entry": result};
+
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		data: JSON.stringify(data),
+	//         contentType: 'application/json',
+	//         url: 'http://localhost:3000/login',
+	//         xhrFields: { withCredentials: true },						
+	//         success: function(data) {
+	//             console.log('success');
+	//             console.log(JSON.stringify(data));
+	//         }
+	//     });
+	// });
 }
 
+function signUpTest() {
+
+	// var bcrypt = bCrypt();
+
+	// console.log(bcrypt);
+
+	var chosenUsername = $("#signUpUsername").val();
+	var chosenPassword = $("#signUpPassword").val();
+
+	if (!chosenPassword || !chosenUsername) {
+		Ext.Msg.alert("ERROR", "Please fill in all required fields!");
+	}
+	else {
+		var data = {"username": chosenUsername, "password": chosenPassword};
+
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:3000/signup',
+			data: JSON.stringify(data),
+			contentType: 'application/json',
+			xhrFields: { withCredentials: true },
+			success: function(results) {
+				Ext.toast(results);
+			}
+		});
+	}
+
+	// var pw = $("#pwText").val();
+
+
+	// $.ajax({
+	// 	type: 'GET',
+	// 	url: 'http://localhost:3000/checkpw',
+	// 	success: function(data) {
+	// 		console.log('success');
+	// 		console.log(pw);
+	// 		console.log(data[0].pw);
+
+	// 		bcrypt.checkpw(pw, data[0].pw, function(result) {
+	// 			console.log("RESULTS OF CHECK:  " + result);
+	// 		});
+
+	// 	}
+	// });
+}

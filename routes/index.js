@@ -22,6 +22,11 @@ router.get('/signup', function(req, res) {
   res.render('signup', { title: 'Registration' });
 });
 
+//profile page
+router.get('/profile', function(req, res) {
+  res.render('profile', { title: 'profile' });
+});
+
 
 router.get('/login', function(req, res) {
 	var db = req.db;

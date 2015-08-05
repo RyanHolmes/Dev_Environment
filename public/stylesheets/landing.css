@@ -4,6 +4,7 @@
 	height: 500px;
 	background: url("../images/Mango-Soup.jpg") no-repeat;
 	overflow: hidden;
+	z-index: 1;
 }
 
 #landingImgOverlay{
@@ -29,6 +30,7 @@
 	height: 50px;
 	color: white;
 	background: rgba(0,0,0,0.5);
+	z-index: 2;
 }
 
 #landingNavbarImg {
@@ -80,10 +82,32 @@
 	color: black;
 }
 
-.landingContent{
+#landingContent{
 	margin-top: 100px;
 	text-align: center;
 	font-size: 5em;
 }
+
+#landingFooter {
+	height: 300px;
+	margin-bottom: 0px;
+	color: white;
+	background: rgba(0,0,0,0.5);
+	z-index: 2;
+}
+
+#landingFooterNav h4:hover{
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+
+
 /*=============================================================*/
 /*=============================================================*/
+
+
+
+
+
+
+

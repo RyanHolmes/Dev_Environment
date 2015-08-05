@@ -1,0 +1,99 @@
+#landingNavbar{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 50px;
+	color: white;
+	background: rgba(0,0,0,0.5);
+}
+
+#landingNavbarImg {
+	height: 50px;
+	width: auto;
+}
+
+#landingLoginBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#landingSignupBtn {
+	float:right;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#landingSignupBtn a {
+	color: white;
+	text-decoration:none;
+}
+
+#landingLoginBtn:hover {
+	color: white;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+
+#landingSignupBtn:hover {
+	color: white;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+
+#profileTabPanel{
+	margin-top: 100px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.profileTabBtn{
+	background: #fcd2be;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.profileTabBtn:active{
+	background: #d17b78;
+}
+
+.profileTabBtn:hover{
+	cursor: pointer;
+}
+
+#profileTab {
+	margin-left: 10px;
+	margin-right: 10px;
+	background: #d17b78;
+}
+
+/*tab panel*/
+.profileTabItem {
+	/*position: fixed;*/
+	background: #d17b78;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#tabPro{
+	visibility: visible;
+}
+#tabCal{
+	visibility: hidden;
+}
+#tabFav{
+	visibility: hidden;
+}
+#tabSet{
+	visibility: hidden;
+}
+#tabPre{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
